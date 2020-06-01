@@ -1,12 +1,16 @@
 import Head from 'next/head';
+import Link from 'next/link';
+
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
 
 const name = 'Misol Goh';
 export const siteTitle = 'Next.js Simple Website';
 
-function Layout({ children, home }) {
+function Layout({ children, home }: {
+  children: React.ReactNode;
+  home?: boolean;
+}) {
   return (
     <div className={styles.container}>
       <Head>
